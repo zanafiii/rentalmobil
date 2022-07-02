@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -42,5 +43,20 @@ class DatabaseSeeder extends Seeder
             "password" => bcrypt("zakiya"),
             "roles" => "ADMIN"
         ]);
+
+        Product::create([
+            "name" => "Meja",
+            "description" => "Meja murah",
+            "price" => 50000,
+            "slug" => "meja"
+        ]);
+
+        Product::create([
+            "name" => "Kursi",
+            "description" => "Kursinya murah banget",
+            "price" => 30000,
+            "slug" => "kursi"
+        ]);
+
     }
 }
