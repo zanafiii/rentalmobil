@@ -45,17 +45,17 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Product::create([
-            "name" => "Meja",
-            "description" => "Meja murah",
-            "price" => 50000,
-            "slug" => "meja"
+            "name" => "Avanza",
+            "description" => "Tipe tahun 2022",
+            "price" => 10000,
+            "slug" => "avanza-2022"
         ]);
 
         Product::create([
-            "name" => "Kursi",
-            "description" => "Kursinya murah banget",
-            "price" => 30000,
-            "slug" => "kursi"
+            "name" => "Kijang Innova",
+            "description" => "Tipe tahun 2022",
+            "price" => 120000,
+            "slug" => "kijang-innova-2022"
         ]);
 
     }
