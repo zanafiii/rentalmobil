@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Product;
+use App\Models\ProductGallery;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -25,8 +26,7 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             "name" => "azzam",
-            "email" => "a
-            zzam@gmail.com",
+            "email" => "azzam@gmail.com",
             "password" => bcrypt("azzam"),
             "roles" => "ADMIN"
         ]);
@@ -48,9 +48,9 @@ class DatabaseSeeder extends Seeder
         Product::create([
             "name" => "Avanza",
             "description" => "Tipe tahun 2022",
-            "price" => 10000,
-            "merek" => 1,
-            "jenis" => 1,
+            "price" => 100000,
+            "merek_id" => 1,
+            "jenis_id" => 1,
             "jumlahSewa" => 10,
             "slug" => "avanza-2022"
         ]);
@@ -59,10 +59,20 @@ class DatabaseSeeder extends Seeder
             "name" => "Kijang Innova",
             "description" => "Tipe tahun 2022",
             "price" => 120000,
-            "merek" => 1,
-            "jenis" => 1,
+            "merek_id" => 1,
+            "jenis_id" => 1,
             "jumlahSewa" => 10,
             "slug" => "kijang-innova-2022"
+        ]);
+
+        ProductGallery::create([
+            "products_id" => 1,
+            "url" => "public/gallery/IQxUeQswiwpxWFpxgAQ2l6d101kU0Xovx5FBL0dq.jpg"
+        ]);
+
+        ProductGallery::create([
+            "products_id" => 2,
+            "url" => "public/gallery/dzDRIuk6Hkwh0k9a2G5TFnr315TObKgukzXdnhuS.jpg"
         ]);
 
     }

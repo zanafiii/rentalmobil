@@ -20,8 +20,8 @@ class CreateProductsTable extends Migration
             $table->longText('description');
 
             //ini relasi ke tabel lain
-            $table->bigInteger('merek');
-            $table->bigInteger('jenis');
+            $table->bigInteger('merek_id');
+            $table->bigInteger('jenis_id');
 
             //Jumlah sewa
             $table->bigInteger('jumlahSewa');

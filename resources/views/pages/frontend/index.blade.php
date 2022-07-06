@@ -16,7 +16,7 @@
           <div>
             <a
               href="#browse-the-room"
-              class="flex-none inline-block px-8 py-3 mt-4 text-black transition duration-200 bg-pink-400 rounded-full hover:bg-black hover:text-pink-400"
+              class="flex-none inline-block px-8 py-3 mt-4 text-black transition duration-200 bg-orange-400 rounded-full hover:bg-black hover:text-pink-400"
               >Explore Now</a
             >
           </div>

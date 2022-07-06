@@ -19,7 +19,9 @@
 
     <meta name="theme-color" content="#000" />
     <link rel="icon" href="{{ url('frontend/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link href="{{ url('frontend/css/app.minify.css') }}" rel="stylesheet">
+
   </head>
 
   <body>
