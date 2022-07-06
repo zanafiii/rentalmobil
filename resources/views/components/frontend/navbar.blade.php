@@ -1,8 +1,8 @@
 <!-- START: HEADER -->
 <header class="{{ \Route::current()->getName() == 'index' ? 'absolute' : '' }} w-full z-50 px-4">
-  <div class="container mx-auto py-5">
-    <div class="flex flex-stretch items-center">
-      <div class="w-56 items-center flex">
+  <div class="container py-5 mx-auto">
+    <div class="flex items-center flex-stretch">
+      <div class="flex items-center w-56">
         <a href="{{ route('index') }}">
             <img
             src="{{ url('frontend/images/content/logo.png') }}"
@@ -13,34 +13,56 @@
       <div class="w-full"></div>
       <div class="w-auto">
         <ul
-          class="fixed bg-white inset-0 flex flex-col invisible items-center justify-center opacity-0 md:visible md:flex-row md:bg-transparent md:relative md:opacity-100 md:flex md:items-center"
+          class="fixed inset-0 flex flex-col items-center justify-center invisible bg-white opacity-0 md:visible md:flex-row md:bg-transparent md:relative md:opacity-100 md:flex md:items-center"
           id="menu"
         >
-          <li class="mx-3 py-6 md:py-0">
+          <li class="py-6 mx-3 md:py-0">
             <a href="#" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
               >Showcase</a
             >
           </li>
-          <li class="mx-3 py-6 md:py-0">
+          <li class="py-6 mx-3 md:py-0">
             <a href="#" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
               >Catalog</a
             >
           </li>
-          <li class="mx-3 py-6 md:py-0">
+          <li class="py-6 mx-3 md:py-0">
             <a href="#" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
               >Delivery</a
             >
           </li>
-          <li class="mx-3 py-6 md:py-0">
+          <li class="py-6 mx-3 md:py-0">
             <a href="#" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
               >Rewards</a
             >
           </li>
+
+          {{-- ini adalah menu khusus untuk admin --}}
+          @auth
+            <li class="py-6 mx-3 md:py-0">
+              <a href="{{ route('dashboard.index') }}" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
+                >Dashboard</a
+              >
+            </li>
+          @endauth
+          @guest
+            <li class="py-6 mx-3 md:py-0">
+              <a href="{{ route('login') }}" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
+                >Login</a
+              >
+            </li>
+            <li class="py-6 mx-3 md:py-0">
+              <a href="{{ route('register') }}" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
+                >Register</a
+              >
+            </li>
+          @endguest
+
         </ul>
       </div>
       <div class="w-auto">
-        <ul class="items-center flex">
-          <li class="ml-6 block md:hidden">
+        <ul class="flex items-center">
+          <li class="block ml-6 md:hidden">
             <button
               id="menu-toggler"
               class="relative flex z-50 items-center justify-center w-8 h-8 text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} focus:outline-none"
@@ -67,7 +89,7 @@
             <a
               id="header-cart"
               class="flex items-center justify-center w-8 h-8 text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }}"
-              href="cart.html"
+              href="{{ route('cart') }}"
             >
               <svg
                 class="fill-current"
