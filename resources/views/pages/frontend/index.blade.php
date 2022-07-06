@@ -163,7 +163,7 @@
                 <div class="relative px-4 card group">
                     <div
                     class="relative overflow-hidden rounded-xl card-shadow"
-                    style="width: 287px; height: 386px"
+                    style="width: 287px; height: 287px"
                     >
                     <div
                         class="absolute flex items-center justify-center w-full h-full transition duration-200 bg-black opacity-0 group-hover:opacity-100 bg-opacity-35"

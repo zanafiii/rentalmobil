@@ -49,6 +49,9 @@ class DatabaseSeeder extends Seeder
             "name" => "Avanza",
             "description" => "Tipe tahun 2022",
             "price" => 10000,
+            "merek" => 1,
+            "jenis" => 1,
+            "jumlahSewa" => 10,
             "slug" => "avanza-2022"
         ]);
 
@@ -56,6 +59,9 @@ class DatabaseSeeder extends Seeder
             "name" => "Kijang Innova",
             "description" => "Tipe tahun 2022",
             "price" => 120000,
+            "merek" => 1,
+            "jenis" => 1,
+            "jumlahSewa" => 10,
             "slug" => "kijang-innova-2022"
         ]);
 

@@ -18,9 +18,16 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->unsignedBigInteger('price');
             $table->longText('description');
-            
+
+            //ini relasi ke tabel lain
+            $table->bigInteger('merek');
+            $table->bigInteger('jenis');
+
+            //Jumlah sewa
+            $table->bigInteger('jumlahSewa');
+
             $table->string('slug')->unique();
-            
+
             $table->softDeletes();
             $table->timestamps();
         });
