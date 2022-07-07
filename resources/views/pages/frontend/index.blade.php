@@ -7,16 +7,16 @@
           class="absolute inset-0 z-20 flex flex-col justify-center w-full text-center md:relative md:w-1/2 hero-caption"
         >
           <h1 class="text-3xl font-semibold leading-tight md:text-5xl">
-            The Room <br class="" />You've Dreaming
+            Mobil <br class="" />Sesuai Kebutuhan Kamu
           </h1>
           <h2 class="px-8 my-6 text-base tracking-wide md:px-0 md:text-lg">
-            Kami menyediakan furniture berkelas yang
-            <br class="hidden lg:block" />membuat ruangan terasa homey
+            Kami menyediakan berbagai mobil
+            <br class="hidden lg:block" />yang nyaman dengan transaksi yang aman
           </h2>
           <div>
             <a
-              href="#browse-the-room"
-              class="flex-none inline-block px-8 py-3 mt-4 text-black transition duration-200 bg-pink-400 rounded-full hover:bg-black hover:text-pink-400"
+              href="#browse-the-merk"
+              class="flex-none inline-block px-8 py-3 mt-4 text-black transition duration-200 bg-orange-400 rounded-full hover:bg-black hover:text-white-400"
               >Explore Now</a
             >
           </div>
@@ -24,25 +24,8 @@
         <div class="inset-0 w-full md:relative md:w-1/2">
           <div class="relative hero-image">
             <div class="inset-0 z-10 bg-black overlay opacity-35"></div>
-            <div class="bottom-0 right-0 overlay md:inset-0">
-              <button
-                class="z-30 video hero-cta focus:outline-none modal-trigger"
-                data-content='<div class="relative z-50 w-screen pb-56 md:w-88 md:pb-56">
-                <div class="absolute w-full h-full">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/3h0_v1cdUIA"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>'
-              ></button>
-            </div>
             <img
-              src="/frontend/images/content/image-section-1.png"
+              src="/frontend/images/content/home.png"
               alt="hero 1"
               class="absolute inset-0 object-cover object-center w-full h-full md:relative"
             />
@@ -52,11 +35,11 @@
       <!-- END: HERO -->
 
       <!-- START: BROWSE THE ROOM -->
-      <section class="flex px-4 py-16 bg-gray-100" id="browse-the-room">
+      <section class="flex px-4 py-16 bg-gray-100" >
         <div class="container mx-auto">
           <div class="flex mb-4 flex-start">
             <h3 class="text-2xl font-semibold capitalize">
-              browse the room <br class="" />that we designed for you
+              Jenis Mobil <br class="" />Yang disediakan untuk kamu
             </h3>
           </div>
           <div class="grid grid-cols-9 grid-rows-2 gap-4">
@@ -66,7 +49,7 @@
             >
               <div class="card-shadow rounded-xl">
                 <img
-                  src="/frontend/images/content/image-catalog-1.png"
+                  src="/frontend/images/content/sedan.png"
                   alt=""
                   class="object-cover object-center w-full h-full overflow-hidden overlay rounded-xl"
                 />
@@ -74,10 +57,10 @@
               <div
                 class="top-0 bottom-0 left-0 flex flex-col justify-center pl-48 overlay md:pl-72"
               >
-                <h5 class="text-lg font-semibold">Living Room</h5>
-                <span class="">18.309 items</span>
+                <h5 class="text-lg font-semibold"></h5>
+                <span class=""></span>
               </div>
-              <a href="details.html" class="stretched-link">
+              <a href="#browse-the-car" class="stretched-link">
                 <!-- fake children -->
               </a>
             </div>
@@ -86,7 +69,7 @@
             >
               <div class="card-shadow rounded-xl">
                 <img
-                  src="/frontend/images/content/image-catalog-3.png"
+                  src="/frontend/images/content/hatchback.png"
                   alt=""
                   class="object-cover object-center w-full h-full overflow-hidden overlay rounded-xl"
                 />
@@ -94,10 +77,10 @@
               <div
                 class="top-0 bottom-0 left-0 right-0 flex flex-col justify-center pt-0 pl-48 overlay md:bottom-auto md:items-center md:pl-0 md:pt-12"
               >
-                <h5 class="text-lg font-semibold">Decoration</h5>
-                <span class="">77.392 items</span>
+                <h5 class="text-lg font-semibold"></h5>
+                <span class=""></span>
               </div>
-              <a href="details.html" class="stretched-link">
+              <a href="#browse-the-car" class="stretched-link">
                 <!-- fake children -->
               </a>
             </div>
@@ -106,7 +89,7 @@
             >
               <div class="card-shadow rounded-xl">
                 <img
-                  src="/frontend/images/content/image-catalog-4.png"
+                  src="/frontend/images/content/suv.png"
                   alt=""
                   class="object-cover object-center w-full h-full overflow-hidden overlay rounded-xl"
                 />
@@ -114,17 +97,17 @@
               <div
                 class="top-0 bottom-0 left-0 right-0 flex flex-col justify-center pt-0 pl-48 overlay md:bottom-auto md:items-center md:pl-0 md:pt-12"
               >
-                <h5 class="text-lg font-semibold">Living Room</h5>
-                <span class="">22.094 items</span>
+                <h5 class="text-lg font-semibold"></h5>
+                <span class=""></span>
               </div>
-              <a href="details.html" class="stretched-link">
+              <a href="#browse-the-car" class="stretched-link">
                 <!-- fake children -->
               </a>
             </div>
             <div class="relative col-span-9 row-span-1 md:col-span-4 card">
               <div class="card-shadow rounded-xl">
                 <img
-                  src="/frontend/images/content/image-catalog-2.png"
+                  src="/frontend/images/content/mpv.png"
                   alt=""
                   class="object-cover object-center w-full h-full overflow-hidden overlay rounded-xl"
                 />
@@ -132,10 +115,10 @@
               <div
                 class="top-0 bottom-0 left-0 flex flex-col justify-center pl-48 overlay md:pl-72"
               >
-                <h5 class="text-lg font-semibold">Children Room</h5>
-                <span class="">837 items</span>
+                <h5 class="text-lg font-semibold"></h5>
+                <span class=""></span>
               </div>
-              <a href="details.html" class="stretched-link">
+              <a href="#browse-the-car" class="stretched-link">
                 <!-- fake children -->
               </a>
             </div>
@@ -145,11 +128,11 @@
       <!-- END: BROWSE THE ROOM -->
 
       <!-- START: JUST ARRIVED -->
-      <section class="flex flex-col py-16">
+      <section class="flex flex-col py-16" id="browse-the-car">
         <div class="container mx-auto mb-4">
           <div class="flex justify-center mb-4 text-center">
             <h3 class="text-2xl font-semibold capitalize">
-              Just Arrived <br class="" />this summer for you
+              Pilih Mobil <br class="" />Sesuai Kebutuhan Kamu
             </h3>
           </div>
         </div>
@@ -215,18 +198,18 @@
           <div
             class="flex-auto w-full px-4 my-4 md:w-auto md:flex-initial md:px-6 md:my-0"
           >
-            <img src="/frontend/images/content/logo-adobe.svg" alt="" class="mx-auto" />
+            <img src="/frontend/images/content/logo-honda.png" alt="" class="mx-auto" />
           </div>
           <div
             class="flex-auto w-full px-4 my-4 md:w-auto md:flex-initial md:px-6 md:my-0"
           >
-            <img src="/frontend/images/content/logo-ikea.svg" alt="" class="mx-auto" />
+            <img src="/frontend/images/content/logo-toyota.png" alt="" class="mx-auto" />
           </div>
           <div
             class="flex-auto w-full px-4 my-4 md:w-auto md:flex-initial md:px-6 md:my-0"
           >
             <img
-              src="/frontend/images/content/logo-hermanmiller.svg"
+              src="/frontend/images/content/logo-mitsubishi.png"
               alt=""
               class="mx-auto"
             />
@@ -234,7 +217,7 @@
           <div
             class="flex-auto w-full px-4 my-4 md:w-auto md:flex-initial md:px-6 md:my-0"
           >
-            <img src="/frontend/images/content/logo-miele.svg" alt="" class="mx-auto" />
+            <img src="/frontend/images/content/logo-daihatsu.png" alt="" class="mx-auto" />
           </div>
         </div>
       </section>
