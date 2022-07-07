@@ -15,7 +15,7 @@
           </h2>
           <div>
             <a
-              href="#browse-the-merk"
+              href="#jenis-mobil"
               class="flex-none inline-block px-8 py-3 mt-4 text-black transition duration-200 bg-orange-400 rounded-full hover:bg-black hover:text-white-400"
               >Explore Now</a
             >
@@ -35,7 +35,7 @@
       <!-- END: HERO -->
 
       <!-- START: BROWSE THE ROOM -->
-      <section class="flex px-4 py-16 bg-gray-100" >
+      <section class="flex px-4 py-16 bg-gray-100" id="jenis-mobil" >
         <div class="container mx-auto">
           <div class="flex mb-4 flex-start">
             <h3 class="text-2xl font-semibold capitalize">
