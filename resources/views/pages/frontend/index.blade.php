@@ -57,8 +57,8 @@
               <div
                 class="top-0 bottom-0 left-0 flex flex-col justify-center pl-48 overlay md:pl-72"
               >
-                <h5 class="text-lg font-semibold"></h5>
-                <span class=""></span>
+                <h5 class="text-lg font-semibold">Sedan</h5>
+                <span class="">1000 item</span>
               </div>
               <a href="#browse-the-car" class="stretched-link">
                 <!-- fake children -->
@@ -69,7 +69,7 @@
             >
               <div class="card-shadow rounded-xl">
                 <img
-                  src="/frontend/images/content/hatchback.png"
+                  src="/frontend/images/content/hatchback1.png"
                   alt=""
                   class="object-cover object-center w-full h-full overflow-hidden overlay rounded-xl"
                 />
@@ -77,8 +77,8 @@
               <div
                 class="top-0 bottom-0 left-0 right-0 flex flex-col justify-center pt-0 pl-48 overlay md:bottom-auto md:items-center md:pl-0 md:pt-12"
               >
-                <h5 class="text-lg font-semibold"></h5>
-                <span class=""></span>
+                <h5 class="text-lg font-semibold">Hatchback</h5>
+                <span class="">2000 item</span>
               </div>
               <a href="#browse-the-car" class="stretched-link">
                 <!-- fake children -->
@@ -89,7 +89,7 @@
             >
               <div class="card-shadow rounded-xl">
                 <img
-                  src="/frontend/images/content/suv.png"
+                  src="/frontend/images/content/suv1.png"
                   alt=""
                   class="object-cover object-center w-full h-full overflow-hidden overlay rounded-xl"
                 />
@@ -97,8 +97,8 @@
               <div
                 class="top-0 bottom-0 left-0 right-0 flex flex-col justify-center pt-0 pl-48 overlay md:bottom-auto md:items-center md:pl-0 md:pt-12"
               >
-                <h5 class="text-lg font-semibold"></h5>
-                <span class=""></span>
+                <h5 class="text-lg font-semibold">SUV</h5>
+                <span class="">3000 item</span>
               </div>
               <a href="#browse-the-car" class="stretched-link">
                 <!-- fake children -->
@@ -107,7 +107,7 @@
             <div class="relative col-span-9 row-span-1 md:col-span-4 card">
               <div class="card-shadow rounded-xl">
                 <img
-                  src="/frontend/images/content/mpv.png"
+                  src="/frontend/images/content/mpv1.png"
                   alt=""
                   class="object-cover object-center w-full h-full overflow-hidden overlay rounded-xl"
                 />
@@ -115,8 +115,8 @@
               <div
                 class="top-0 bottom-0 left-0 flex flex-col justify-center pl-48 overlay md:pl-72"
               >
-                <h5 class="text-lg font-semibold"></h5>
-                <span class=""></span>
+                <h5 class="text-lg font-semibold">MPV</h5>
+                <span class="">1200 item</span>
               </div>
               <a href="#browse-the-car" class="stretched-link">
                 <!-- fake children -->
