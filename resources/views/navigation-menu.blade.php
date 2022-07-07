@@ -4,7 +4,7 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="flex items-center shrink-0">
+                <div class="flex items-center mt-4 shrink-0" style="width: 134px; height: 35px">
                     <a href="{{ route('dashboard.index') }}">
                         <x-jet-application-mark class="block w-auto h-9" />
                     </a>
@@ -20,6 +20,11 @@
                     @if (Auth::user()->roles=='ADMIN')
                         <x-jet-nav-link href="{{ route('dashboard.product.index') }}" :active="request()->routeIs('dashboard.product.index')">
                             {{ __('Products') }}
+                        </x-jet-nav-link><x-jet-nav-link href="{{ route('dashboard.jenis.index') }}" :active="request()->routeIs('dashboard.jenis.index')">
+                            {{ __('Jenis') }}
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('dashboard.merek.index') }}" :active="request()->routeIs('dashboard.merek.index')">
+                            {{ __('Merek') }}
                         </x-jet-nav-link>
                         <x-jet-nav-link href="{{ route('dashboard.transaction.index') }}" :active="request()->routeIs('dashboard.transaction.index')">
                             {{ __('Transaction') }}
@@ -162,6 +167,12 @@
             @if (Auth::user()->roles=='ADMIN')
                 <x-jet-responsive-nav-link href="{{ route('dashboard.product.index') }}" :active="request()->routeIs('dashboard.product.index')">
                     {{ __('Products') }}
+                </x-jet-responsive-nav-link>
+                <x-jet-responsive-nav-link href="{{ route('dashboard.jenis.index') }}" :active="request()->routeIs('dashboard.jenis.index')">
+                    {{ __('Jenis') }}
+                </x-jet-responsive-nav-link>
+                <x-jet-responsive-nav-link href="{{ route('dashboard.merek.index') }}" :active="request()->routeIs('dashboard.merek.index')">
+                    {{ __('Merek') }}
                 </x-jet-responsive-nav-link>
                 <x-jet-responsive-nav-link href="{{ route('dashboard.transaction.index') }}" :active="request()->routeIs('dashboard.transaction.index')">
                     {{ __('Transaction') }}

@@ -18,5 +18,13 @@ class Product extends Model
     {
         return $this->hasMany(ProductGallery::class, 'products_id', 'id');
     }
+    public function jenis()
+    {
+        return $this->belongsTo(Jenis::class);
+    }
+    public function merek()
+    {
+        return $this->belongsTo(Merek::class);
+    }
 }
 
