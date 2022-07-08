@@ -6,6 +6,10 @@ use App\Models\Product;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
+use App\Models\Type;
+use App\Models\Merek;
+use Brick\Math\BigInteger;
+use Ramsey\Uuid\Type\Integer;
 use Yajra\DataTables\Facades\DataTables;
 
 class ProductController extends Controller
@@ -55,7 +59,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('pages.dashboard.product.create');
+        $mereks = Merek::all();
+        $type = Type::all();
+        return view('pages.dashboard.product.create', compact('mereks','type'));
     }
 
     /**
@@ -93,9 +99,11 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
+        $mereks = Merek::all();
+        $types = Type::all();
         return view('pages.dashboard.product.edit', [
             'item' => $product
-        ]);
+        ], compact('mereks','types'));
     }
 
     /**

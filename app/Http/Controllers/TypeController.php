@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\JenisRequest;
-use App\Models\Jenis;
+use App\Models\Type;
 use Illuminate\Http\Request;
+use App\Http\Requests\TypeRequest;
 use Yajra\DataTables\Facades\DataTables;
 
-class JenisController extends Controller
+class TypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,15 +18,15 @@ class JenisController extends Controller
     {
         if(request()->ajax())
         {
-            $query = Jenis::query();
+            $query = Type::query();
 
                 return DataTables::of($query)
                     ->addColumn('action', function($item){
                         return '
-                            <a href="'. route('dashboard.jenis.edit', $item->id) .'" class="px-2 py-1 m-2 text-white bg-gray-500 rounded-md">
+                            <a href="'. route('dashboard.type.edit', $item->id) .'" class="px-2 py-1 m-2 text-white bg-gray-500 rounded-md">
                                 Edit
                             </a>
-                            <form class="inline-block" action="'. route('dashboard.jenis.destroy', $item->id ) .'" method="POST">
+                            <form class="inline-block" action="'. route('dashboard.type.destroy', $item->id ) .'" method="POST">
                                 <button class="px-2 py-1 m-2 text-white bg-red-500 rounded-md">
                                     Hapus
                                 </button>
@@ -38,7 +38,7 @@ class JenisController extends Controller
                     ->make();
         }
 
-        return view('pages.dashboard.jenis.index');
+        return view('pages.dashboard.type.index');
     }
 
     /**
@@ -48,7 +48,7 @@ class JenisController extends Controller
      */
     public function create()
     {
-        return view('pages.dashboard.jenis.create');
+        return view('pages.dashboard.type.create');
     }
 
     /**
@@ -57,12 +57,12 @@ class JenisController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(JenisRequest $request)
+    public function store(TypeRequest $request)
     {
         $data = $request->all();
-        Jenis::create($data);
+        Type::create($data);
 
-        return redirect()->route('dashboard.jenis.index');
+        return redirect()->route('dashboard.type.index');
     }
 
     /**
@@ -82,10 +82,10 @@ class JenisController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Jenis $jenis)
+    public function edit(Type $type)
     {
-        return view('pages.dashboard.jenis.edit', [
-            'item' => $jenis
+        return view('pages.dashboard.type.edit', [
+            'item' => $type
         ]);
     }
 
@@ -96,9 +96,13 @@ class JenisController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TypeRequest $request, Type $type)
     {
-        //
+        $data = $request->all();
+
+        $type->update($data);
+
+        return redirect() -> route('dashboard.type.index');
     }
 
     /**
@@ -107,10 +111,10 @@ class JenisController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Jenis $jenis)
+    public function destroy(Type $type)
     {
-        $jenis->delete();
+        $type->delete();
 
-        return redirect()->route('dashboard.jenis.index');
+        return redirect()->route('dashboard.type.index');
     }
 }

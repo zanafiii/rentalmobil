@@ -20,11 +20,8 @@ class CreateProductsTable extends Migration
             $table->longText('description');
 
             //ini relasi ke tabel lain
-            $table->bigInteger('merek_id');
-            $table->bigInteger('jenis_id');
-
-            //Jumlah sewa
-            $table->bigInteger('jumlahSewa');
+            $table->bigInteger('mereks_id');
+            $table->bigInteger('types_id');
 
             $table->string('slug')->unique();
 

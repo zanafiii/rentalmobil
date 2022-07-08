@@ -27,6 +27,8 @@ class ProductRequest extends FormRequest
         return [
             //this rules contain products data
             'name' => 'required|max:255',
+            'mereks_id' => 'required',
+            'types_id' => 'required',
             'description' => 'required',
             'price' => 'required|integer'
         ];

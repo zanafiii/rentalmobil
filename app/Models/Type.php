@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Jenis extends Model
+class Type extends Model
 {
     use HasFactory, SoftDeletes;
 
@@ -16,6 +16,6 @@ class Jenis extends Model
 
     public function products()
     {
-        return $this->hasMany(Product::class, 'jenis_id', 'id');
+        return $this->hasMany(Product::class, 'types_id', 'id');
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TypeController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\JenisController;
 use App\Http\Controllers\MerekController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\FrontendController;
@@ -59,7 +59,7 @@ Route::middleware(['auth:sanctum','verified'])->name('dashboard.')->prefix('dash
         Route::resource('user', UserController::class)->only([
             'index','edit','update','destroy'
         ]);
-        Route::resource('jenis', JenisController::class);
+        Route::resource('type', TypeController::class);
         Route::resource('merek', MerekController::class);
     });
 });

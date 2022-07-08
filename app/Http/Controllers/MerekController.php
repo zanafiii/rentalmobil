@@ -82,9 +82,11 @@ class MerekController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Merek $merek)
     {
-        //
+        return view('pages.dashboard.merek.edit', [
+            'item' => $merek
+        ]);
     }
 
     /**
@@ -94,9 +96,13 @@ class MerekController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(MerekRequest $request, Merek $merek)
     {
-        //
+        $data = $request->all();
+
+        $merek->update($data);
+
+        return redirect() -> route('dashboard.merek.index');
     }
 
     /**
@@ -105,8 +111,10 @@ class MerekController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Merek $merek)
     {
-        //
+        $merek->delete();
+
+        return redirect()->route('dashboard.merek.index');
     }
 }

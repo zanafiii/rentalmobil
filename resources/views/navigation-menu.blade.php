@@ -20,8 +20,8 @@
                     @if (Auth::user()->roles=='ADMIN')
                         <x-jet-nav-link href="{{ route('dashboard.product.index') }}" :active="request()->routeIs('dashboard.product.index')">
                             {{ __('Products') }}
-                        </x-jet-nav-link><x-jet-nav-link href="{{ route('dashboard.jenis.index') }}" :active="request()->routeIs('dashboard.jenis.index')">
-                            {{ __('Jenis') }}
+                        </x-jet-nav-link><x-jet-nav-link href="{{ route('dashboard.type.index') }}" :active="request()->routeIs('dashboard.type.index')">
+                            {{ __('Type') }}
                         </x-jet-nav-link>
                         <x-jet-nav-link href="{{ route('dashboard.merek.index') }}" :active="request()->routeIs('dashboard.merek.index')">
                             {{ __('Merek') }}
@@ -168,8 +168,8 @@
                 <x-jet-responsive-nav-link href="{{ route('dashboard.product.index') }}" :active="request()->routeIs('dashboard.product.index')">
                     {{ __('Products') }}
                 </x-jet-responsive-nav-link>
-                <x-jet-responsive-nav-link href="{{ route('dashboard.jenis.index') }}" :active="request()->routeIs('dashboard.jenis.index')">
-                    {{ __('Jenis') }}
+                <x-jet-responsive-nav-link href="{{ route('dashboard.type.index') }}" :active="request()->routeIs('dashboard.type.index')">
+                    {{ __('Type') }}
                 </x-jet-responsive-nav-link>
                 <x-jet-responsive-nav-link href="{{ route('dashboard.merek.index') }}" :active="request()->routeIs('dashboard.merek.index')">
                     {{ __('Merek') }}

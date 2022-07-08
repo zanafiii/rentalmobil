@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="text-xl font-semibold leading-tight text-gray-800">
-            {{ __('Jenis') }}
+            {{ __('Type') }}
         </h2>
     </x-slot>
 
@@ -33,8 +33,8 @@
     <div class="py-12">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="mb-10">
-                <a href="{{  route('dashboard.jenis.create') }}" class="px-4 py-2 font-bold text-white bg-green-500 rounded shadow-lg hover:bg-green-700">
-                    + Create Jenis
+                <a href="{{  route('dashboard.type.create') }}" class="px-4 py-2 font-bold text-white bg-green-500 rounded shadow-lg hover:bg-green-700">
+                    + Create Type
                 </a>
             </div>
             <div class="overflow-hidden shadow sm-rounded-md">

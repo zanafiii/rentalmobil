@@ -195,7 +195,7 @@
                     />
                     </div>
                     <h5 class="mt-4 text-lg font-semibold">{{ $product->name }}</h5>
-                    <span class="">IDR {{ number_format($product->price) }}</span>
+                    <span class="">IDR {{ number_format($product->price) }} / DAY</span>
                     <a href="{{ route('details', $product->slug) }}" class="stretched-link">
                     <!-- fake children -->
                     </a>
