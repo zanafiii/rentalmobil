@@ -90,7 +90,7 @@ class FrontendController extends Controller
         // Setup Midtrans Variable
         $midtrans = [
             'transaction_details' => [
-                'order_id'      => 'LUX-' . $transaction->id,  //Prefix buat kode order
+                'order_id'      => 'RAC-' . $transaction->id,  //Prefix buat kode order
                 'gross_amount'  => (int) $transaction->total_price
             ],
             'customer_details'  => [

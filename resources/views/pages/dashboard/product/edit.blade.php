@@ -33,6 +33,32 @@
                         <input type="text" value="{{ old('name') ?? $item->name }}" name="name" placeholder="Product Name" class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-700 rounded focus:outline-none focus:bg-white focus:border-gray-500">
                     </div>
                 </div>
+                {{-- Form Merek --}}
+                <div class="flex flex-wrap mb-6 -mx-3">
+                    <div class="w-full px-3">
+                        <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase">Merek</label>
+                        <select name="mereks_id" class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-700 rounded focus:outline-none focus:bg-white focus:border-gray-500">
+                            <option value="{{ $item->mereks_id }}">{{ $item->merek['name'] }}</option>
+                            <option disabled>---------------------</option>
+                            @foreach ($mereks as $merek)
+                                <option value="{{ $merek->id }}" {{ old('merek_id') == $merek->id ? 'selected' : null }}>{{ $merek->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                {{-- form Type --}}
+                <div class="flex flex-wrap mb-6 -mx-3">
+                    <div class="w-full px-3">
+                        <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase">Merek</label>
+                        <select name="types_id" class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-700 rounded focus:outline-none focus:bg-white focus:border-gray-500">
+                            <option value="{{ $item->types_id }}">{{ $item->type['name'] }}</option>
+                            <option disabled>---------------------</option>
+                            @foreach ($types as $type)
+                                <option value="{{ $type->id }}" {{ old('type_id') == $type->id ? 'selected' : null }}>{{ $type->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
                 <div class="flex flex-wrap mb-6 -mx-3">
                     <div class="w-full px-3">
                         <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase">Description</label>

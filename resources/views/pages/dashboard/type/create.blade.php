@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="text-xl font-semibold leading-tight text-gray-800">
-            Transaction &raquo; {{ $item->name }} &raquo; Edit
+            Type &raquo; Create
         </h2>
     </x-slot>
 
@@ -24,29 +24,18 @@
                     </div>
                 </div>
             @endif
-            <form action="{{ route('dashboard.transaction.update', $item->id) }}" class="w-full" method="post" enctype="multipart/form-data">
+            <form action="{{ route('dashboard.type.store') }}" class="w-full" method="post" enctype="multipart/form-data">
                 @csrf
-                @method('PUT')
                 <div class="flex flex-wrap mb-6 -mx-3">
                     <div class="w-full px-3">
-                        <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase">Status</label>
-                        <select name="status" class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-700 rounded focus:outline-none focus:bg-white focus:border-gray-500">
-                            <option value="{{ $item->status }}">{{ $item->status }}</option>
-                            <option disabled>---------------------</option>
-                            <option value="PENDING">PENDING</option>
-                            <option value="SUCCESS">SUCCESS</option>
-                            <option value="CHALLENGE">CHALLENGE</option>
-                            <option value="FAILED">FAILED</option>
-                            <option value="SHIPPING">SHIPPING</option>
-                            <option value="SHIPPED">SHIPPED</option>
-                        </select>
+                        <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase">Name</label>
+                        <input type="text" value="{{ old('name') }}" name="name" placeholder="Type Name" class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-700 rounded focus:outline-none focus:bg-white focus:border-gray-500">
                     </div>
                 </div>
-
                 <div class="flex flex-wrap mb-6 -mx-3">
                     <div class="w-full px-3">
                         <button type="submit" class="px-4 py-2 font-bold text-white bg-green-500 rounded shadow-lg hover:bg-green-700">
-                            Update Status
+                            Save Type
                         </button>
                     </div>
                 </div>

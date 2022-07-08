@@ -15,8 +15,8 @@
           </h2>
           <div>
             <a
-              href="#jenis-mobil"
-              class="flex-none inline-block px-8 py-3 mt-4 text-black transition duration-200 bg-orange-400 rounded-full hover:bg-black hover:text-white-400"
+              href="#browse-the-room"
+              class="flex-none inline-block px-8 py-3 mt-4 text-black transition duration-200 bg-orange-400 rounded-full hover:bg-black hover:text-pink-400"
               >Explore Now</a
             >
           </div>
@@ -178,7 +178,7 @@
                     />
                     </div>
                     <h5 class="mt-4 text-lg font-semibold">{{ $product->name }}</h5>
-                    <span class="">IDR {{ number_format($product->price) }}</span>
+                    <span class="">IDR {{ number_format($product->price) }} / DAY</span>
                     <a href="{{ route('details', $product->slug) }}" class="stretched-link">
                     <!-- fake children -->
                     </a>
