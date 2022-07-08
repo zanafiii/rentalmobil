@@ -24,6 +24,23 @@
         <div class="inset-0 w-full md:relative md:w-1/2">
           <div class="relative hero-image">
             <div class="inset-0 z-10 bg-black overlay opacity-35"></div>
+            <div class="bottom-0 right-0 overlay md:inset-0">
+              <button
+                class="z-30 video hero-cta focus:outline-none modal-trigger"
+                data-content='<div class="relative z-50 w-screen pb-56 md:w-88 md:pb-56">
+                <div class="absolute w-full h-full">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/7YWZfOnIy6o"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>'
+              ></button>
+            </div>
             <img
               src="/frontend/images/content/home.png"
               alt="hero 1"
