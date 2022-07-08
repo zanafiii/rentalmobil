@@ -37,7 +37,7 @@
                 <div class="flex flex-wrap mb-6 -mx-3">
                     <div class="w-full px-3">
                         <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase">Merek</label>
-                        <select name="merek_id" class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-700 rounded focus:outline-none focus:bg-white focus:border-gray-500">
+                        <select name="mereks_id" class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-700 rounded focus:outline-none focus:bg-white focus:border-gray-500">
                             <option value="">Merek Mobil</option>
                             @foreach ($mereks as $item)
                                 <option value="{{ $item->id }}" {{ old('merek_id') == $item->id ? 'selected' : null }}>{{ $item->name }}</option>
@@ -48,10 +48,10 @@
                 {{-- form Type --}}
                 <div class="flex flex-wrap mb-6 -mx-3">
                     <div class="w-full px-3">
-                        <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase">Merek</label>
-                        <select name="type_id" class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-700 rounded focus:outline-none focus:bg-white focus:border-gray-500">
+                        <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase">Tipe</label>
+                        <select name="types_id" class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-700 rounded focus:outline-none focus:bg-white focus:border-gray-500">
                             <option value="">Type Mobil</option>
-                            @foreach ($type as $item)
+                            @foreach ($types as $item)
                                 <option value="{{ $item->id }}" {{ old('type_id') == $item->id ? 'selected' : null }}>{{ $item->name }}</option>
                             @endforeach
                         </select>

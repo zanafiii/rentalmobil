@@ -1,15 +1,73 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="text-xl font-semibold leading-tight text-gray-800">
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+    {{-- <div class="py-12">
+        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="overflow-hidden bg-white shadow-xl sm:rounded-lg">
                 <x-jet-welcome />
+            </div>
+        </div>
+    </div> --}}
+
+    <div class="py-12">
+        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="overflow-hidden bg-white shadow-xl sm:rounded-lg">
+                <div class="my-4 panel">
+                    <div id="chartMerek"></div>
+                </div>
             </div>
         </div>
     </div>
 </x-app-layout>
+
+<script>
+    Highcharts.chart('chartMerek', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Data Mobil Sewaan'
+        },
+        subtitle: {
+            text: 'Berdasarkan Merek dan Jenis'
+        },
+        xAxis: {
+            categories: {!! json_encode($mereks) !!},
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Jumlah Mobil'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+
+        series: [
+
+            <?php
+                foreach($nTypes as $nType){
+                    $data = "[" . implode(", ", $nType['data']) . "]";
+                    echo "{ name: '" . $nType['type'] . "', data: " . $data . "},";
+                }
+            ?>
+        ]
+    });
+</script>
