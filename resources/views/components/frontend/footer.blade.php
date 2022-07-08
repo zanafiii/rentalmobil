@@ -68,7 +68,7 @@
                   class="bg-gray-100 rounded-xl py-3 px-5 w-full focus:outline-none"
                   placeholder="Your email adress"
                 />
-                <button class="bg-pink-400 absolute rounded-xl right-0 p-3">
+                <button class="bg-orange-400 absolute rounded-xl right-0 p-3">
                   <svg
                     width="24"
                     height="24"
