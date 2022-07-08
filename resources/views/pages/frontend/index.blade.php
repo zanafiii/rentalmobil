@@ -15,8 +15,8 @@
           </h2>
           <div>
             <a
-              href="#browse-the-room"
-              class="flex-none inline-block px-8 py-3 mt-4 text-black transition duration-200 bg-orange-400 rounded-full hover:bg-black hover:text-pink-400"
+              href="#jenis-mobil"
+              class="flex-none inline-block px-8 py-3 mt-4 text-black transition duration-200 bg-orange-400 rounded-full hover:bg-black hover:text-white-400"
               >Explore Now</a
             >
           </div>
@@ -72,10 +72,10 @@
                 />
               </div>
               <div
-                class="top-0 bottom-0 left-0 flex flex-col justify-center pl-48 overlay md:pl-72"
+                class="top-0 bottom-0 left-0 right-0 flex flex-col justify-center pt-0 pl-48 overlay md:bottom-auto md:items-center md:pl-0 md:pt-12"
               >
-                <h5 class="text-lg font-semibold">Sedan</h5>
-                <span class="">1000 item</span>
+                <h2 class="text-2xl font-bold text-white">Sedan</h2>
+                <span class="text-white">1000 item</span>
               </div>
               <a href="#browse-the-car" class="stretched-link">
                 <!-- fake children -->
@@ -94,8 +94,8 @@
               <div
                 class="top-0 bottom-0 left-0 right-0 flex flex-col justify-center pt-0 pl-48 overlay md:bottom-auto md:items-center md:pl-0 md:pt-12"
               >
-                <h5 class="text-lg font-semibold">Hatchback</h5>
-                <span class="">2000 item</span>
+                <h2 class="text-2xl font-bold text-white">Hatchback</h2>
+                <span class="text-white">2000 item</span>
               </div>
               <a href="#browse-the-car" class="stretched-link">
                 <!-- fake children -->
@@ -114,8 +114,8 @@
               <div
                 class="top-0 bottom-0 left-0 right-0 flex flex-col justify-center pt-0 pl-48 overlay md:bottom-auto md:items-center md:pl-0 md:pt-12"
               >
-                <h5 class="text-lg font-semibold">SUV</h5>
-                <span class="">3000 item</span>
+                <h2 class="text-2xl font-bold text-white">SUV</h2>
+                <span class="text-white">3000 item</span>
               </div>
               <a href="#browse-the-car" class="stretched-link">
                 <!-- fake children -->
@@ -130,10 +130,10 @@
                 />
               </div>
               <div
-                class="top-0 bottom-0 left-0 flex flex-col justify-center pl-48 overlay md:pl-72"
+                class="top-0 bottom-0 left-0 right-0 flex flex-col justify-center pt-0 pl-48 overlay md:bottom-auto md:items-center md:pl-0 md:pt-12"
               >
-                <h5 class="text-lg font-semibold">MPV</h5>
-                <span class="">1200 item</span>
+                <h2 class="text-2xl font-bold text-white">MPV</h2>
+                <span class="text-white">1200 item</span>
               </div>
               <a href="#browse-the-car" class="stretched-link">
                 <!-- fake children -->
