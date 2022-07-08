@@ -12,41 +12,35 @@ class DashboardController extends Controller
 {
     public function index(Request $request)
     {
-        $products = Product::all();
-
-        // Menyiapkan data untuk chart
-        // $mereks = Merek::all();
-        $mereks = [];
+        // Menyiapkan data untuk Bar Chart All Mobil
+        $mereksName = [];
         foreach(Merek::all() as $merek){
-            array_push($mereks, $merek->name);
+            array_push($mereksName, $merek->name);
         }
-
-        // $types = Type::all();
-
-        $types = [];
-        foreach(Type::all() as $type){
-            array_push($types, $type->name);
-        }
-
         $nTypes = [];
         foreach(Type::all() as $type){
             $n = [];
-
             foreach(Merek::all() as $merek){
                 array_push($n, Product::where('types_id', $type->id)->where('mereks_id', $merek->id)->count());
             }
-
             $nTypes[$type->name] = [
                 'type' => $type->name,
                 'data' => $n,
             ];
         }
 
-        // dd(json_encode($nTypes));
+        // Menyiapkan data untuk Bar Chart All Mobil
+        $pMereks = [];
+        foreach(Merek::all() as $merek){
+            $n = Product::where('mereks_id', $merek->id)->count();
+            $pMereks[$merek->name] = [
+                'name' => $merek->name,
+                'data' => $n
+            ];
 
+        }
 
-
-        return view('dashboard', compact('mereks', 'nTypes'));
+        return view('dashboard', compact('mereksName', 'nTypes', 'pMereks'));
     }
 
 }

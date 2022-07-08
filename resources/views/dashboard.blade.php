@@ -17,7 +17,17 @@
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="overflow-hidden bg-white shadow-xl sm:rounded-lg">
                 <div class="my-4 panel">
-                    <div id="chartMerek"></div>
+                    <div id="BarChartMobil"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-6">
+        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="overflow-hidden bg-white shadow-xl sm:rounded-lg">
+                <div class="my-4 panel">
+                    <div id="PieChartMerek"></div>
                 </div>
             </div>
         </div>
@@ -25,7 +35,7 @@
 </x-app-layout>
 
 <script>
-    Highcharts.chart('chartMerek', {
+    Highcharts.chart('BarChartMobil', {
         chart: {
             type: 'column'
         },
@@ -36,7 +46,7 @@
             text: 'Berdasarkan Merek dan Jenis'
         },
         xAxis: {
-            categories: {!! json_encode($mereks) !!},
+            categories: {!! json_encode($mereksName) !!},
             crosshair: true
         },
         yAxis: {
@@ -69,5 +79,50 @@
                 }
             ?>
         ]
+    });
+</script>
+
+<script>
+    Highcharts.chart('PieChartMerek', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Pie Chart Merek Mobil'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+            }
+        },
+        series: [{
+            name: 'Merek Mobil',
+            colorByPoint: true,
+            data: [
+
+                <?php
+                    foreach($pMereks as $pMerek){
+                        echo "{name:'" . $pMerek['name'] . "',y:" . $pMerek['data'] . ",},";
+                    }
+                ?>
+
+                ]
+        }]
     });
 </script>
