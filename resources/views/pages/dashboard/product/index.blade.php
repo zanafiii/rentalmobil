@@ -16,6 +16,8 @@
                 columns: [
                     { data: 'id', name: 'id', width: '5%'},
                     { data: 'name', name: 'name'},
+                    { data: 'mereks_id' , name: 'mereks_id'},
+                    { data: 'types_id' , name: 'types_id'},
                     { data: 'price', name: 'price'},
                     {
                         data: 'action',
@@ -32,20 +34,22 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="mb-10">
-                <a href="{{  route('dashboard.product.create') }}" class=" bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">
+                <a href="{{  route('dashboard.product.create') }}" class="px-4 py-2 font-bold text-white bg-green-500 rounded shadow-lg hover:bg-green-700">
                     + Create Product
                 </a>
             </div>
-            <div class="shadow overflow-hidden sm-rounded-md">
+            <div class="overflow-hidden shadow sm-rounded-md">
                 <div class="px-4 py-5 bg-white sm:p-6">
                     <table id="crudTable">
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Nama</th>
-                                <th>Harga</th>
+                                <th>Merek</th>
+                                <th>Tipe</th>
+                                <th>Harga Sewa / Hari</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>

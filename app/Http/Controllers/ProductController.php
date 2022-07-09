@@ -45,6 +45,12 @@ class ProductController extends Controller
                 ->editColumn('price', function($item){
                     return number_format($item->price);
                 })
+                ->editColumn('mereks_id', function($item){
+                    return $item->merek['name'];
+                })
+                ->editColumn('types_id', function($item){
+                    return $item->type['name'];
+                })
                 ->rawColumns(['action'])
                 ->make();
         }
@@ -60,8 +66,8 @@ class ProductController extends Controller
     public function create()
     {
         $mereks = Merek::all();
-        $type = Type::all();
-        return view('pages.dashboard.product.create', compact('mereks','type'));
+        $types = Type::all();
+        return view('pages.dashboard.product.create', compact('mereks','types'));
     }
 
     /**
