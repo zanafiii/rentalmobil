@@ -17,25 +17,26 @@
           id="menu"
         >
           <li class="py-6 mx-3 md:py-0">
-            <a href="#" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
+            <a href="{{ route('index') }}" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
+              >Home</a
+            >
+          </li>
+          <li class="py-6 mx-3 md:py-0">
+            <a href="#jenis-mobil" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
               >Showcase</a
             >
           </li>
           <li class="py-6 mx-3 md:py-0">
-            <a href="#" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
+            <a href="#browse-the-car" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
               >Catalog</a
             >
           </li>
           <li class="py-6 mx-3 md:py-0">
-            <a href="#" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
+            <a href="{{ route('cart') }}"" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
               >Delivery</a
             >
           </li>
-          <li class="py-6 mx-3 md:py-0">
-            <a href="#" class="text-black {{ \Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline"
-              >Rewards</a
-            >
-          </li>
+
 
           {{-- ini adalah menu khusus untuk admin --}}
           @auth

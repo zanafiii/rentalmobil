@@ -27,14 +27,13 @@
               />
               <h2 class="mb-6 text-3xl font-semibold">Ah yes it’s success!</h2>
               <p class="mb-12 text-lg">
-                Furniture yang anda beli akan kami kirimkan saat ini juga so now
-                please sit tight and be ready for it
+                Pembayaran anda sudah kami terima, terima kasih telah menyewa mobil di Rent a Car!
               </p>
               <a
-                href="details.html"
-                class="w-full px-8 py-3 text-lg text-gray-900 transition-all duration-200 bg-red-200 rounded-full cursor-pointer focus:outline-none focus:text-black"
+                href="{{ route('index') }}"
+                class="w-full px-8 py-3 text-lg text-gray-900 transition-all duration-200 bg-orange-200 rounded-full cursor-pointer focus:outline-none focus:text-black"
               >
-                Back to Shop
+                Back to Home
               </a>
             </div>
           </div>

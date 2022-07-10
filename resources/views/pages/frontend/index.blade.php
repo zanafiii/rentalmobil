@@ -7,7 +7,7 @@
           class="absolute inset-0 z-20 flex flex-col justify-center w-full text-center md:relative md:w-1/2 hero-caption"
         >
           <h1 class="text-3xl font-semibold leading-tight md:text-5xl">
-            Mobil <br class="" />Sesuai Kebutuhan Kamu
+            Sewa Mobil <br class="" />Sesuai Kebutuhan Kamu
           </h1>
           <h2 class="px-8 my-6 text-base tracking-wide md:px-0 md:text-lg">
             Kami menyediakan berbagai mobil
@@ -42,7 +42,8 @@
               ></button>
             </div>
             <img
-              src="/frontend/images/content/home.png"
+              {{-- src="/frontend/images/content/home.png" --}}
+              src="/frontend/images/content/showroom2.jpg"
               alt="hero 1"
               class="absolute inset-0 object-cover object-center w-full h-full md:relative"
             />

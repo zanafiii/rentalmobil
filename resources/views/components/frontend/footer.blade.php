@@ -4,7 +4,7 @@
       <div class="flex justify-center mb-8">
         <img
           src="{{ url('frontend/images/content/logo.png') }}"
-          alt="Luxspace | Fulfill your house with beautiful furniture"
+          alt="Rent a Car | Find your dream rental car"
         />
       </div>
       <aside class="container mx-auto">
@@ -68,7 +68,7 @@
                   class="bg-gray-100 rounded-xl py-3 px-5 w-full focus:outline-none"
                   placeholder="Your email adress"
                 />
-                <button class="bg-orange-400 absolute rounded-xl right-0 p-3">
+                <button class="bg-orange-400 absolute rounded-xl right-0 p-3" href="https://mail.google.com/mail/">
                   <svg
                     width="24"
                     height="24"
@@ -94,7 +94,7 @@
   <!-- START: FOOTER -->
   <footer class="flex text-center px-4 py-8 justify-center">
     <p class="text-sm">
-      Copyright 2021 • All Rights Reserved LuxSpace by BuildWith Angga
+      Copyright 2022 • All Rights Reserved Rent a Car by IKAZON INC.
     </p>
   </footer>
   <!-- END: FOOTER -->

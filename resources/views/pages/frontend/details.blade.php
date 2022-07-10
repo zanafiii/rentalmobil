@@ -6,10 +6,10 @@
         <div class="container mx-auto">
           <ul class="breadcrumb">
             <li>
-              <a href="index.html">Home</a>
+              <a href="{{ route('index') }}">Home</a>
             </li>
             <li>
-              <a href="#">Office Room</a>
+              <a href="#">Cars</a>
             </li>
             <li>
               <a href="#" aria-label="current-page">Details</a>
@@ -24,7 +24,7 @@
         <div class="flex flex-wrap my-4 md:my-12">
           <div class="w-full px-4 md:hidden">
             <h2 class="text-5xl font-semibold">{{ $product->name }}</h2>
-            <span class="text-xl">IDR {{ number_format($product->price) }}</span>
+            <span class="text-xl">IDR {{ number_format($product->price) }} / DAY</span>
           </div>
           <div class="flex-1">
             <div class="slider">
@@ -59,13 +59,13 @@
           </div>
           <div class="flex-1 px-4 md:p-6">
             <h2 class="text-5xl font-semibold">{{ $product->name }}</h2>
-            <p class="text-xl">IDR {{ number_format($product->price) }}</p>
+            <p class="text-xl">IDR {{ number_format($product->price) }} / DAY</p>
 
             <form action="{{ route('cart-add', $product->id) }}" method="POST">
                 @csrf
                 <button
                     type="submit"
-                    class="inline-flex px-8 py-3 mt-4 text-black transition-all duration-200 bg-pink-400 rounded-full focus:bg-black focus:text-pink-400"
+                    class="inline-flex px-8 py-3 mt-4 text-black transition-all duration-200 bg-orange-400 rounded-full focus:bg-black focus:text-orange-400"
                     ><svg
                         class="mr-3 fill-current"
                         width="26"
@@ -88,12 +88,12 @@
                         d="M25.6499 4.508C25.407 4.22245 25.0472 4.05871 24.6626 4.05871H4.82655L4.42595 2.19571C4.34232 1.80709 4.06563 1.48078 3.68565 1.32272L0.890528 0.160438C0.567841 0.0261566 0.192825 0.168008 0.0528584 0.477043C-0.0872597 0.786176 0.0608116 1.14549 0.383347 1.27957L3.17852 2.4419L6.2598 16.7708C6.38117 17.3351 6.90578 17.7446 7.50723 17.7446H22.7635C23.1152 17.7446 23.4003 17.4715 23.4003 17.1346C23.4003 16.7976 23.1152 16.5245 22.7635 16.5245H7.50728L7.13247 14.7815H22.8814C23.4828 14.7815 24.0075 14.3719 24.1288 13.8076L25.9101 5.52488C25.9876 5.16421 25.8928 4.79349 25.6499 4.508ZM22.8814 13.5615H6.87012L5.08895 5.27879L24.6626 5.27884L22.8814 13.5615Z"
                         />
                     </svg>
-                    Add to Cart
+                    Rent Now
                 </button>
             </form>
             <hr class="my-8" />
 
-            <h6 class="mb-4 text-xl font-semibold">About the product</h6>
+            <h6 class="mb-4 text-xl font-semibold">About the Car</h6>
             <p class="mb-6 text-xl leading-7">
               {!! $product->description !!}
             </p>
@@ -107,7 +107,7 @@
         <div class="container mx-auto">
           <div class="flex mb-4 flex-start">
             <h3 class="text-2xl font-semibold capitalize">
-              Complete your room <br class="" />with what we designed
+              Other Cars <br class="" />You Might Be Intrested
             </h3>
           </div>
           <div class="flex mb-4 -mx-3 overflow-x-auto">
@@ -123,7 +123,7 @@
                         />
                     </div>
                     <h5 class="mt-4 text-lg font-semibold">{{ $recommendation->name }}</h5>
-                    <span class="">IDR {{ number_format($recommendation->price) }}</span>
+                    <span class="">IDR {{ number_format($recommendation->price) }} / DAY</span>
                     <a href="{{ route('details', $recommendation->slug) }}" class="stretched-link">
                         <!-- fake children -->
                     </a>

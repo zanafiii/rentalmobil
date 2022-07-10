@@ -6,10 +6,10 @@
         <div class="container mx-auto">
         <ul class="breadcrumb">
             <li>
-            <a href="index.html">Home</a>
+            <a href="{{ route('index') }}">Home</a>
             </li>
             <li>
-            <a href="#" aria-label="current-page">Shopping Cart</a>
+            <a href="#" aria-label="current-page">Checkout</a>
             </li>
         </ul>
         </div>
@@ -23,7 +23,7 @@
             <div
                 class="flex pb-3 mt-8 mb-4 border-b border-gray-200 flex-start md:border-b-0"
             >
-                <h3 class="text-2xl">Shopping Cart</h3>
+                <h3 class="text-2xl">Checkout</h3>
             </div>
             <div class="hidden mb-4 border-b border-gray-200 md:block">
                 <div class="flex items-center pb-2 -mx-4 flex-start">
@@ -34,7 +34,7 @@
                 </div>
                 <div class="w-5/12 px-4">
                     <div class="">
-                    <h6>Product</h6>
+                    <h6>Car</h6>
                     </div>
                 </div>
                 <div class="w-5/12 px-4">
@@ -102,7 +102,7 @@
             @empty
                 <p id="cart-empty" class="py-8 text-center">
                     Ooops... Cart is empty
-                    <a href="{{ route('index') }}" class="underline">Shop Now</a>
+                    <a href="{{ route('index') }}" class="underline">Search Again</a>
                 </p>
 
             @endforelse
@@ -115,7 +115,7 @@
                 <form action="{{ route('checkout') }}" method="POST">
                     @csrf
                     <div class="flex mb-6 flex-start">
-                        <h3 class="text-2xl">Shipping Details</h3>
+                        <h3 class="text-2xl">Order Details</h3>
                     </div>
                     <div class="flex flex-col mb-4">
                         <label for="complete-name" class="mb-2 text-sm"
@@ -265,7 +265,7 @@
                         <button
                         type="submit"
                         disabled
-                        class="w-full px-6 py-3 text-lg text-black transition-all duration-200 bg-pink-400 rounded-full hover:bg-black hover:text-pink-400 focus:outline-none focus:text-black"
+                        class="w-full px-6 py-3 text-lg text-black transition-all duration-200 bg-orange-400 rounded-full hover:bg-black hover:text-orange-400 focus:outline-none focus:text-black"
                         >
                         Checkout Now
                         </button>
