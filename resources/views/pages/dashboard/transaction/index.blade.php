@@ -17,7 +17,6 @@
                     { data: 'id', name: 'id', width: '5%'},
                     { data: 'name', name: 'name'},
                     { data: 'phone', name: 'phone'},
-                    { data: 'courier', name: 'courier'},
                     { data: 'total_price', name: 'total_price'},
                     { data: 'status', name: 'status'},
                     {
@@ -44,7 +43,6 @@
                                 <th>ID</th>
                                 <th>Nama</th>
                                 <th>Telepon</th>
-                                <th>Kurir</th>
                                 <th>Total Harga</th>
                                 <th>Status</th>
                                 <th>Aksi</th>
