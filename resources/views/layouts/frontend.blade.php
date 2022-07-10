@@ -12,13 +12,12 @@
     <meta property="og:image" content="" />
 
     <link rel="manifest" href="site.webmanifest" />
-    <link rel="apple-touch-icon" href="{{ url('frontend/images/content/favicon.png') }}" />
+    <link rel="apple-touch-icon" href="{{ url('frontend/images/content/logokecil.png') }}" />
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="icon" href="{{ url('frontend/images/content/favicon.png') }}" />
+    <link rel="icon" href="{{ url('frontend/images/content/logokecil.png') }}" />
 
     <meta name="theme-color" content="#000" />
-    <link rel="icon" href="{{ url('frontend/favicon.ico') }}">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link href="{{ url('frontend/css/app.minify.css') }}" rel="stylesheet">
 
