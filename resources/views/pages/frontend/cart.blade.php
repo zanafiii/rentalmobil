@@ -69,7 +69,7 @@
                         <h6 class="text-lg font-semibold leading-8 md:text-xl">
                             {{ $item->product->name }}
                         </h6>
-                        <span class="text-sm md:text-lg">Office Room</span>
+                        <span class="text-sm md:text-lg">Ready</span>
                         <h6
                         class="block text-base font-semibold md:text-lg md:hidden"
                         >
