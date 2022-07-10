@@ -40,7 +40,7 @@
                         <select name="mereks_id" class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-700 rounded focus:outline-none focus:bg-white focus:border-gray-500">
                             <option value="">Merek Mobil</option>
                             @foreach ($mereks as $item)
-                                <option value="{{ $item->id }}" {{ old('merek_id') == $item->id ? 'selected' : null }}>{{ $item->name }}</option>
+                                <option value="{{ $item->id }}" {{ old('mereks_id') == $item->id ? 'selected' : null }}>{{ $item->name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -52,7 +52,7 @@
                         <select name="types_id" class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-700 rounded focus:outline-none focus:bg-white focus:border-gray-500">
                             <option value="">Type Mobil</option>
                             @foreach ($types as $item)
-                                <option value="{{ $item->id }}" {{ old('type_id') == $item->id ? 'selected' : null }}>{{ $item->name }}</option>
+                                <option value="{{ $item->id }}" {{ old('types_id') == $item->id ? 'selected' : null }}>{{ $item->name }}</option>
                             @endforeach
                         </select>
                     </div>

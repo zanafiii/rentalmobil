@@ -2,17 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RentRequest;
 use App\Models\Product;
-use Illuminate\Support\Str;
+use App\Models\Rent;
+use App\Models\User;
 use Illuminate\Http\Request;
-use App\Http\Requests\ProductRequest;
-use App\Models\Type;
-use App\Models\Merek;
-use Brick\Math\BigInteger;
-use Ramsey\Uuid\Type\Integer;
 use Yajra\DataTables\Facades\DataTables;
 
-class ProductController extends Controller
+class RentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,18 +20,15 @@ class ProductController extends Controller
     {
         if(request()->ajax())
         {
-            $query = Product::query();
+            $query = Rent::query();
 
             return DataTables::of($query)
                 ->addColumn('action', function($item){
                     return '
-                        <a href="'. route('dashboard.product.gallery.index', $item->id) .'" class="px-2 py-1 m-2 text-black bg-yellow-500 rounded-md">
-                            Gallery
-                        </a>
-                        <a href="'. route('dashboard.product.edit', $item->id) .'" class="px-2 py-1 m-2 text-white bg-gray-500 rounded-md">
+                        <a href="'. route('dashboard.rent.edit', $item->id) .'" class="px-2 py-1 m-2 text-white bg-gray-500 rounded-md">
                             Edit
                         </a>
-                        <form class="inline-block" action="'. route('dashboard.product.destroy', $item->id ) .'" method="POST">
+                        <form class="inline-block" action="'. route('dashboard.rent.destroy', $item->id ) .'" method="POST">
                             <button class="px-2 py-1 m-2 text-white bg-red-500 rounded-md">
                                 Hapus
                             </button>
@@ -42,20 +36,20 @@ class ProductController extends Controller
                         </form>
                     ';
                 })
-                ->editColumn('mereks_id', function($item){
-                    return $item->merek['name'];
+                ->editColumn('users_id', function($item){
+                    return $item->user['name'];
                 })
-                ->editColumn('types_id', function($item){
-                    return $item->type['name'];
+                ->editColumn('products_id', function($item){
+                    return $item->product['name'];
                 })
-                ->editColumn('price', function($item){
-                    return number_format($item->price);
+                ->editColumn('total_harga', function($item){
+                    return number_format($item->total_harga);
                 })
                 ->rawColumns(['action'])
                 ->make();
         }
 
-        return view('pages.dashboard.product.index');
+        return view('pages.dashboard.rent.index');
     }
 
     /**
@@ -65,9 +59,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $mereks = Merek::all();
-        $types = Type::all();
-        return view('pages.dashboard.product.create', compact('mereks','types'));
+        $products = Product::all();
+        $users = User::all();
+        return view('pages.dashboard.rent.create', compact('products','users'));
     }
 
     /**
@@ -76,14 +70,15 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductRequest $request)
+    public function store(RentRequest $request)
     {
         $data = $request->all();
-        $data['slug'] = Str::slug($request->name);
+        $hargaMobil = Product::where('id', $request->products_id)->first()->price;
+        $data['total_harga'] = $hargaMobil* $request->lama_sewa;
 
-        Product::create($data);
+        Rent::create($data);
 
-        return redirect() -> route('dashboard.product.index');
+        return redirect() -> route('dashboard.rent.index');
     }
 
     /**
@@ -103,13 +98,13 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Rent $rent)
     {
-        $mereks = Merek::all();
-        $types = Type::all();
-        return view('pages.dashboard.product.edit', [
-            'item' => $product
-        ], compact('mereks','types'));
+        $products = Product::all();
+        $users = User::all();
+        return view('pages.dashboard.rent.edit', [
+            'item' => $rent
+        ], compact('products','users'));
     }
 
     /**
@@ -119,14 +114,16 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProductRequest $request,  Product $product)
+    public function update(RentRequest $request, Rent $rent)
     {
         $data = $request->all();
-        $data['slug'] = Str::slug($request->name);
+        $hargaMobil = Product::where('id', $request->products_id)->first()->price;
+        $data['total_harga'] = $hargaMobil* $request->lama_sewa;
+        $data['users_id'] = $rent->users_id;
 
-        $product->update($data);
+        $rent->update($data);
 
-        return redirect() -> route('dashboard.product.index');
+        return redirect() -> route('dashboard.rent.index');
     }
 
     /**
@@ -135,10 +132,10 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Rent $rent)
     {
-        $product->delete();
+        $rent->delete();
 
-        return redirect()->route('dashboard.product.index');
+        return redirect()->route('dashboard.rent.index');
     }
 }

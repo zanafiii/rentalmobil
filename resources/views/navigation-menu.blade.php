@@ -20,22 +20,26 @@
                     @if (Auth::user()->roles=='ADMIN')
                         <x-jet-nav-link href="{{ route('dashboard.product.index') }}" :active="request()->routeIs('dashboard.product.index')">
                             {{ __('Products') }}
-                        </x-jet-nav-link><x-jet-nav-link href="{{ route('dashboard.type.index') }}" :active="request()->routeIs('dashboard.type.index')">
-                            {{ __('Type') }}
                         </x-jet-nav-link>
                         <x-jet-nav-link href="{{ route('dashboard.merek.index') }}" :active="request()->routeIs('dashboard.merek.index')">
                             {{ __('Merek') }}
                         </x-jet-nav-link>
-                        <x-jet-nav-link href="{{ route('dashboard.transaction.index') }}" :active="request()->routeIs('dashboard.transaction.index')">
-                            {{ __('Transaction') }}
+                        <x-jet-nav-link href="{{ route('dashboard.type.index') }}" :active="request()->routeIs('dashboard.type.index')">
+                            {{ __('Type') }}
                         </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('dashboard.rent.index') }}" :active="request()->routeIs('dashboard.rent.index')">
+                            {{ __('Sewa') }}
+                        </x-jet-nav-link>
+                        {{-- <x-jet-nav-link href="{{ route('dashboard.transaction.index') }}" :active="request()->routeIs('dashboard.transaction.index')">
+                            {{ __('Transaction') }}
+                        </x-jet-nav-link> --}}
                         <x-jet-nav-link href="{{ route('dashboard.user.index') }}" :active="request()->routeIs('dashboard.user.index')">
                             {{ __('User') }}
                         </x-jet-nav-link>
                     @endif
-                    <x-jet-nav-link href="{{ route('dashboard.my-transaction.index') }}" :active="request()->routeIs('dashboard.my-transaction.index')">
+                    {{-- <x-jet-nav-link href="{{ route('dashboard.my-transaction.index') }}" :active="request()->routeIs('dashboard.my-transaction.index')">
                         {{ __('My Transaction') }}
-                    </x-jet-nav-link>
+                    </x-jet-nav-link> --}}
 
                 </div>
             </div>
@@ -168,22 +172,25 @@
                 <x-jet-responsive-nav-link href="{{ route('dashboard.product.index') }}" :active="request()->routeIs('dashboard.product.index')">
                     {{ __('Products') }}
                 </x-jet-responsive-nav-link>
-                <x-jet-responsive-nav-link href="{{ route('dashboard.type.index') }}" :active="request()->routeIs('dashboard.type.index')">
-                    {{ __('Type') }}
-                </x-jet-responsive-nav-link>
                 <x-jet-responsive-nav-link href="{{ route('dashboard.merek.index') }}" :active="request()->routeIs('dashboard.merek.index')">
                     {{ __('Merek') }}
                 </x-jet-responsive-nav-link>
-                <x-jet-responsive-nav-link href="{{ route('dashboard.transaction.index') }}" :active="request()->routeIs('dashboard.transaction.index')">
-                    {{ __('Transaction') }}
+                <x-jet-responsive-nav-link href="{{ route('dashboard.type.index') }}" :active="request()->routeIs('dashboard.type.index')">
+                    {{ __('Type') }}
                 </x-jet-responsive-nav-link>
+                <x-jet-responsive-nav-link href="{{ route('dashboard.rent.index') }}" :active="request()->routeIs('dashboard.rent.index')">
+                    {{ __('Sewa') }}
+                </x-jet-responsive-nav-link>
+                {{-- <x-jet-responsive-nav-link href="{{ route('dashboard.transaction.index') }}" :active="request()->routeIs('dashboard.transaction.index')">
+                    {{ __('Transaction') }}
+                </x-jet-responsive-nav-link> --}}
                 <x-jet-responsive-nav-link href="{{ route('dashboard.user.index') }}" :active="request()->routeIs('dashboard.user.index')">
                     {{ __('User') }}
                 </x-jet-responsive-nav-link>
             @endif
-            <x-jet-responsive-nav-link href="{{ route('dashboard.my-transaction.index') }}" :active="request()->routeIs('dashboard.my-transaction.index')">
+            {{-- <x-jet-responsive-nav-link href="{{ route('dashboard.my-transaction.index') }}" :active="request()->routeIs('dashboard.my-transaction.index')">
                 {{ __('My Transaction') }}
-            </x-jet-responsive-nav-link>
+            </x-jet-responsive-nav-link> --}}
         </div>
 
         <!-- Responsive Settings Options -->

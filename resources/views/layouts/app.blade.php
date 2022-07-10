@@ -11,7 +11,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Styles -->
+        <link href="{{ url('frontend/css/app.minify.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
 
         <!--- Tambahkan setelah app.css --->
         <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
@@ -76,6 +78,7 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
 
         <!--- Tambahkan setelah app.js --->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

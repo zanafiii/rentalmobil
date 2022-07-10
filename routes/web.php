@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RentController;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MerekController;
@@ -61,5 +62,6 @@ Route::middleware(['auth:sanctum','verified'])->name('dashboard.')->prefix('dash
         ]);
         Route::resource('type', TypeController::class);
         Route::resource('merek', MerekController::class);
+        Route::resource('rent', RentController::class);
     });
 });
